@@ -1,0 +1,91 @@
+MT Dev Details
+
+Login Details
+    gcloud anthos auth login --cluster ctcnonprdusr001
+
+    kubectl config set-context --current --namespace=omms-mtdev
+
+    kubectl get po
+
+    kubectl logs
+
+    kubectl describe po
+
+
+
+Endpoints
+
+API	EndPoint
+    DocSCG = ommsdocscgapi-mt-dev.hcck8s-ctc-np1.optum.com
+    ProvSCG = ommsprovscgapi-mt-dev.hcck8s-ctc-np1.optum.com
+    Springcloud = omms-pe-springcloud-mt-dev.hcck8s-ctc-np1.optum.com
+    Java Service = omms-pe-api-mt-dev.hcck8s-ctc-np1.optum.com
+    Gateway = omms-pe-gateway-mt-dev.hcck8s-ctc-np1.optum.com
+    Legacy = omms-pe-legacy-enrollment-api-mt-dev.hcck8s-ctc-np1.optum.com
+    PNRM Mock = omms-pe-pnrm-mock-mt-test.hcck8s-ctc.optum.com
+    UI = omms-pe-ui-mt-dev.hcck8s-ctc-np1.optum.com
+    User Api = omms-pe-user-api-mt-dev.hcck8s-ctc-np1.optum.com
+
+
+Database Details
+
+Application = ServerName = DatabaseName
+MYSQL = dbvrd73444.uhc.com = oil_util
+Oracle = ed22-scan01:1521/ogs0dv04svc.uhc.com = OMPGMD
+Postgres = postgresql:5432 = config_db (Database)
+Mongodb = rp000123304,rp000123305,rp000123306.uhc.com:42395 = ommsdbmtdev
+Redis = omms-pe-redis:6379
+RMQ = apsrt2707.uhc.com:5672 = mt_dev (Vhost)
+
+
+AP & Stargate Details
+
+Stargate client id - 6Yq7LMqe1SdU1uEHHRL3vkcsJywshxEw
+
+Token URL - https://gateway-stage.optum.com/auth/oauth2/token
+
+Provider URL - https://gateway-stage.optum.com/api/mo/cdm/omms/provider/scgrouting/v2.0
+
+Document URL - https://gateway-stage.optum.com/api/mo/cdm/omms/doc/scgrouting/v2.0
+
+Member URL - https://gateway-stage.optum.com/api/mo/cdm/omms/member/scgrouting/v2.0
+
+Claims URL - https://gateway-stage.optum.com/api/mo/cdm/omms/claim/scgrouting/v2.0
+
+PNRM Recommendation URL - https://gateway-stage.optum.com/api/mo/cdm/omms/mt-dev/recommendations/process/v1.0
+
+tenantId - MT
+
+AP Home Url - https://test-mt-mms.optum.com/tpa-ap-web/
+
+
+
+PNRM Details
+
+Client ID - 3MVG91w9zi214CtXo.OgK.OBJmJXjTp0X9p72R8okGT4O2D98dPccfHioSzy0KpixSi36L6EwKwfDwEdJPil4
+
+Username - apiuser_mtdev@optum.com
+
+Application Endpoint - https://montana-omms-providerenrollment--mtdev.sandbox.my.salesforce.com
+
+Token Endpoint - https://montana-omms-providerenrollment--mtdev.sandbox.my.salesforce.com/services/oauth2/token
+
+Grant Type - password
+
+Primary Point of Contact - OMMS_Team_Vanquisher@ds.uhc.com
+
+Note: Client Id, Client Secret and Password are available through Vault
+
+
+
+Other Details
+
+Bootstrap Naming - gradle-dev.properties/bootstrap-dev.yml/application-dev.properties
+
+Mule Bootstrap Naming - config-dev.properties
+
+Mule/Talend Vault URL - https://omms-vault-nonprod-poc.hcck8s-ctc.optum.com/
+
+Mule ARM Server Name - rn000016528
+
+MYSQL (Data Conversion) - rn000122930/OMDTCONV
